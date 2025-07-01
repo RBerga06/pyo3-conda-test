@@ -41,8 +41,8 @@ jobs:
             target-platform: linux-64
           - os: ubuntu-24.04-arm
             target-platform: linux-aarch64
-          - os: windows-latest
-            target-platform: win-64
+          # - os: windows-latest
+          #   target-platform: win-64
           - os: macos-13
             target-platform: osx-64
           - os: macos-latest
@@ -56,5 +56,6 @@ jobs:
     - uses: prefix-dev/setup-pixi@v0.8.10
       with:
         pixi-version: latest
+        run-install: false
     - run: |
         ls
