@@ -1,0 +1,20 @@
+package:
+  name: pyo3-conda-test
+  version: 1.0.0
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+
+source:
+  path: .
+
+build:
+  script:
+    - cargo install --locked --bins --root ${PREFIX} --path .
+
+tests:
+  - script:
+      - pyo3-conda-test
