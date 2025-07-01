@@ -4,9 +4,9 @@ package:
 
 requirements:
   build:
-    - libpython
+    - python
   run:
-    - libpython
+    - python
 
 source:
   path: .
@@ -17,4 +17,4 @@ build:
 
 tests:
   - script:
-      - pyo3-conda-test
+    - pyo3-conda-test
