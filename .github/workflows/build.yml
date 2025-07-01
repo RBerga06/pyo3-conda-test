@@ -24,6 +24,7 @@ jobs:
     - name: Build conda package
       uses: prefix-dev/rattler-build-action@v0.2.34
       with:
+        recipe-path: ./recipe.yaml
         upload-artifact: true
         # needs to be unique for each matrix entry
         artifact-name: package-${{ matrix.target-platform }}
