@@ -4,9 +4,9 @@ package:
 
 requirements:
   build:
-    - python
+    - libpython
   run:
-    - python
+    - libpython
 
 source:
   path: .
