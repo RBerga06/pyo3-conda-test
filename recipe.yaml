@@ -14,8 +14,10 @@ source:
 
 build:
   script:
-    - $BUILD_PREFIX/bin/cargo install --locked --bins --root ${PREFIX} --path .
+    - if: unix
+      then:
+      - cargo install --locked --bins --root ${PREFIX} --path .
 
 tests:
-  - script:
-    - pyo3-conda-test
+  - package_contents: { bin: pyo3-conda-test }
+  - script: pyo3-conda-test
