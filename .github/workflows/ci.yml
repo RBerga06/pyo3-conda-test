@@ -11,14 +11,14 @@ jobs:
         include:
           - os: ubuntu-latest
             target-platform: linux-64
-          # - os: ubuntu-24.04-arm
-          #   target-platform: linux-aarch64
-          # - os: windows-latest
-          #   target-platform: win-64
-          # - os: macos-13
-          #   target-platform: osx-64
-          # - os: macos-latest
-          #   target-platform: osx-arm64
+          - os: ubuntu-24.04-arm
+            target-platform: linux-aarch64
+          # - os: windows-latest
+          #   target-platform: win-64
+          - os: macos-13
+            target-platform: osx-64
+          - os: macos-latest
+            target-platform: osx-arm64
     steps:
     - uses: actions/checkout@v4
     - name: Build conda package
@@ -39,14 +39,14 @@ jobs:
         include:
           - os: ubuntu-latest
             target-platform: linux-64
-          # - os: ubuntu-24.04-arm
-          #   target-platform: linux-aarch64
+          - os: ubuntu-24.04-arm
+            target-platform: linux-aarch64
           # - os: windows-latest
           #   target-platform: win-64
-          # - os: macos-13
-          #   target-platform: osx-64
-          # - os: macos-latest
-          #   target-platform: osx-arm64
+          - os: macos-13
+            target-platform: osx-64
+          - os: macos-latest
+            target-platform: osx-arm64
     steps:
     - uses: actions/checkout@v4
     - uses: actions/download-artifact@v4
