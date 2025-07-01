@@ -48,7 +48,6 @@ jobs:
           - os: macos-latest
             target-platform: osx-arm64
     steps:
-    - uses: actions/checkout@v4
     - uses: actions/download-artifact@v4
       with:
         name: package-${{ matrix.target-platform }}
@@ -57,5 +56,6 @@ jobs:
       with:
         pixi-version: latest
         run-install: false
-    - run: |
-        ls
+    - run: pixi init .
+    - run: pixi install ${{ matrix.target-platform }}
+    - run: pixi run pyo3-conda-test
