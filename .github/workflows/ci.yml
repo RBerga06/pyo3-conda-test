@@ -60,7 +60,7 @@ jobs:
     - name: Generate `pixi.toml`
       run: |
         mv pixi.toml.template pixi.toml
-        echo "pyo3-conda-test = { path = '${{ matrix.target-platform }}/$(ls ${{ matrix.target-platform }})' }" &> pixi.toml
+        echo "pyo3-conda-test = { path = '${{ matrix.target-platform }}/$(ls ${{ matrix.target-platform }})' }" >> pixi.toml
         cat pixi.toml
     - run: pixi install
     - run: pixi run pyo3-conda-test
