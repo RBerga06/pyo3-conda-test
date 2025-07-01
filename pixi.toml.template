@@ -1,5 +1,3 @@
-# used for testing in CI
-
 [workspace]
 authors = ["rberga06 <78449715+RBerga06@users.noreply.github.com>"]
 channels = ["conda-forge"]
