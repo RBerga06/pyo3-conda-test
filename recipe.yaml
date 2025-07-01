@@ -4,6 +4,7 @@ package:
 
 requirements:
   build:
+    - ${{ compiler('rust') }}
     - python
   run:
     - python
@@ -13,7 +14,7 @@ source:
 
 build:
   script:
-    - cargo install --locked --bins --root ${PREFIX} --path .
+    - $BUILD_PREFIX/bin/cargo install --locked --bins --root ${PREFIX} --path .
 
 tests:
   - script:
