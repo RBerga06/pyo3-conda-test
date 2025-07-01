@@ -57,5 +57,5 @@ jobs:
         pixi-version: latest
         run-install: false
     - run: pixi init .
-    - run: pixi install ${{ matrix.target-platform }}
+    - run: pixi add ${{ matrix.target-platform }}
     - run: pixi run pyo3-conda-test
