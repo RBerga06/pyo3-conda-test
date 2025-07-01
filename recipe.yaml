@@ -5,9 +5,9 @@ package:
 requirements:
   build:
     - ${{ compiler('rust') }}
-    - python
+    - python == 3.13
   run:
-    - python
+    - python == 3.13
 
 source:
   path: .
