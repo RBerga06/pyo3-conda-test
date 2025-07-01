@@ -1,0 +1,13 @@
+# used for testing in CI
+
+[workspace]
+authors = ["rberga06 <78449715+RBerga06@users.noreply.github.com>"]
+channels = ["conda-forge"]
+name = "pyo3-conda-test-env"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+# this must be the last key in this file
+[dependencies]
