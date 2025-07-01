@@ -2,7 +2,7 @@
 authors = ["rberga06 <78449715+RBerga06@users.noreply.github.com>"]
 channels = ["conda-forge"]
 name = "pyo3-conda-test-env"
-platforms = ["osx-arm64"]
+platforms = []
 version = "0.1.0"
 
 [tasks]

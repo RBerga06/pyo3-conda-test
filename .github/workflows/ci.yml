@@ -61,6 +61,6 @@ jobs:
       run: |
         mv pixi.toml.template pixi.toml
         echo "pyo3-conda-test = { path = '${{ matrix.target-platform }}/$(ls ${{ matrix.target-platform }})' }" >> pixi.toml
-        cat pixi.toml
+        pixi workspace platform add ${{ matrix.target-platform }}
     - run: pixi install
     - run: pixi run pyo3-conda-test
