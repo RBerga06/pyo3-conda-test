@@ -16,7 +16,9 @@ source:
 
 build:
   script:
-    - cargo install --locked --bins --root ${PREFIX} --path .
+    interpreter: bash
+    content: |
+      PYO3_CROSS_LIB_DIR="$PREFIX/lib/python3.13" cargo install --locked --bins --root ${PREFIX} --path .
 
 tests:
   - package_contents: { bin: pyo3-conda-test }
