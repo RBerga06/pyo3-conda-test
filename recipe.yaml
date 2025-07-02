@@ -3,10 +3,11 @@ package:
   version: 1.0.0
 
 requirements:
-  build:
+  host:  # runs at build time
     - ${{ compiler('rust') }}
+  build:  # what to link against at build time
     - python == 3.13
-  run:
+  run:  # required at runtime
     - python == 3.13
 
 source:
@@ -14,9 +15,7 @@ source:
 
 build:
   script:
-    - if: unix
-      then:
-      - cargo install --locked --bins --root ${PREFIX} --path .
+    - cargo install --locked --bins --root ${PREFIX} --path .
 
 tests:
   - package_contents: { bin: pyo3-conda-test }
