@@ -5,6 +5,7 @@ package:
 requirements:
   build:  # runs at build time
     - ${{ compiler('rust') }}
+    - python == 3.13  # required by pyo3 (we're not using abi3)
   host:  # what to link against at build time
     - python == 3.13
   run:  # required at runtime
