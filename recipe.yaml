@@ -3,9 +3,9 @@ package:
   version: 1.0.0
 
 requirements:
-  host:  # runs at build time
+  build:  # runs at build time
     - ${{ compiler('rust') }}
-  build:  # what to link against at build time
+  host:  # what to link against at build time
     - python == 3.13
   run:  # required at runtime
     - python == 3.13
