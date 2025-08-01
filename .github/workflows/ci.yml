@@ -53,7 +53,7 @@ jobs:
       with:
         name: package-${{ matrix.target-platform }}
         run-id: ${{ github.run_id }}
-    - uses: prefix-dev/setup-pixi@v0.8.10
+    - uses: prefix-dev/setup-pixi@v0.8.14
       with:
         pixi-version: latest
         run-install: false
